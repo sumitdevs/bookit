@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .px-fluid {
+    padding-left: clamp(1rem, 5vw, 7.5rem);
+    padding-right: clamp(1rem, 5vw, 7.5rem);
+  }
+
+}
