@@ -23,7 +23,6 @@ export const validatePromo = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Promo code expired' });
     }
 
-    // ✅ Make response structure match what the frontend expects
     return res.json({ success: true, data: promo });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });

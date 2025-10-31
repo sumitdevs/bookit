@@ -6,7 +6,8 @@ import bookingsRoutes from './routes/bookings.routes.js';
 import promoRoutes from './routes/promo.routes.js';
 
 const app = express();
-app.use(cors()); // adjust origin for production if needed
+
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(morgan('dev'));
 

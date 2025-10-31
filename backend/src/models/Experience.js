@@ -7,7 +7,6 @@ const SlotSchema = new mongoose.Schema({
   price: { type: Number, required: true, min: 0 }
 }, { _id: true });
 
-// ✅ Add a small schema for bookings inside the same file
 const BookingSchema = new mongoose.Schema({
   email: { type: String, required: true },
   date: { type: String, required: true },
@@ -23,7 +22,6 @@ const ExperienceSchema = new mongoose.Schema({
   images: [{ url: String, alt: String }],
   slots: [SlotSchema],
 
-  // ✅ New field
   bookings: [BookingSchema],
 
   createdAt: { type: Date, default: Date.now }
