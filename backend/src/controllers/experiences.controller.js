@@ -2,9 +2,7 @@ import Experience from '../models/Experience.js';
 
 export const listExperiences = async (req, res) => {
   try {
-    const experiences = await Experience.find()
-      .select('title shortDescription images category')
-      .lean();
+    const experiences = await Experience.find().lean();
     res.json({ success: true, data: experiences });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
